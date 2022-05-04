@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvne2hypy7hue"]
+
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_vkevm"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(160, 90)
+current = true
+smoothing_enabled = true
+script = ExtResource( "1_vkevm" )
+
+[node name="Limits" type="Node" parent="."]
+
+[node name="TopLeft" type="Position2D" parent="Limits"]
+
+[node name="BottomRight" type="Position2D" parent="Limits"]
+position = Vector2(320, 180)
