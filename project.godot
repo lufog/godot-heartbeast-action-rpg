@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Action RPG"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://world.tscn"
 config/icon="res://icon.png"
 config/features=PackedStringArray("4.0", "Vulkan Clustered")
 
 [autoload]
 
-PlayerStats="*res://scenes/player_stats.tscn"
+PlayerStats="*res://player/player_stats.tscn"
 
 [display]
 
