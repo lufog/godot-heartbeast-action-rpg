@@ -78,7 +78,6 @@ func roll_state():
 	# await animationPlayer.animation_finished
 	if rollTimer.is_stopped():
 		rollTimer.start()
-	@warning_ignore(redundant_await)
 	await rollTimer.timeout
 	################################################
 	velocity = Vector2.ZERO
@@ -94,7 +93,6 @@ func attack_state():
 	# await animationPlayer.animation_finished
 	if attackTimer.is_stopped():
 		attackTimer.start()
-	@warning_ignore(redundant_await)
 	await attackTimer.timeout
 	################################################
 	state = MOVE
