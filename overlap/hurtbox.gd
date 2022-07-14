@@ -8,13 +8,11 @@ const hit_effect_scene = preload("res://effects/hit_effect.tscn")
 signal invincibility_started
 signal invincibility_ended
 
-var _invincible = false
-var invincible:
+var invincible := false:
 	set(value):
-		_invincible = value
-		if _invincible == true:
+		invincible = value
+		if invincible == true:
 			invincibility_started.emit()
-			#emit_signal("invincibility_ended")
 		else:
 			invincibility_ended.emit()
 

@@ -1,22 +1,20 @@
 extends Node
 
-@export var _max_health = 1
-var max_health:
+@export var max_health := 1:
 	get:
-		return _max_health
+		return max_health
 	set(value):
-		_max_health = value
-		health = min(health, _max_health)
-		max_health_changed.emit(_max_health)
+		max_health = value
+		health = min(health, max_health)
+		max_health_changed.emit(max_health)
 
-var _health
 var health: int:
 	get: 
-		return _health
+		return health
 	set(value):
-		_health = value
-		health_changed.emit(_health)
-		if _health <= 0:
+		health = value
+		health_changed.emit(health)
+		if health <= 0:
 			no_health.emit()
 
 signal no_health
@@ -24,4 +22,4 @@ signal health_changed(value)
 signal max_health_changed(value)
 
 func _ready():
-	_health = _max_health
+	health = max_health
