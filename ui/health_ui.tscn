@@ -1,23 +1,23 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene load_steps=4 format=3 uid="uid://ccx2ap8qx1rhs"]
 
 [ext_resource type="Script" path="res://ui/health_ui.gd" id="1_3qjtc"]
-[ext_resource type="Texture2D" path="res://ui/assets/textures/heart_ui_empty.png" id="2_tusd0"]
-[ext_resource type="Texture2D" path="res://ui/assets/textures/heart_ui_full.png" id="3_v7bye"]
+[ext_resource type="Texture2D" uid="uid://btg1450xnb8uw" path="res://ui/assets/textures/heart_ui_empty.png" id="2_tusd0"]
+[ext_resource type="Texture2D" uid="uid://dcq6nq6sbgc0f" path="res://ui/assets/textures/heart_ui_full.png" id="3_v7bye"]
 
 [node name="HealthUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( "1_3qjtc" )
+script = ExtResource("1_3qjtc")
 
 [node name="HeartUiEmpty" type="TextureRect" parent="."]
 offset_right = 60.0
 offset_bottom = 11.0
-texture = ExtResource( "2_tusd0" )
+texture = ExtResource("2_tusd0")
 stretch_mode = 1
 
 [node name="HeartUiFull" type="TextureRect" parent="."]
 offset_right = 45.0
 offset_bottom = 11.0
-texture = ExtResource( "3_v7bye" )
+texture = ExtResource("3_v7bye")
 ignore_texture_size = true
 stretch_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://dhhm28xsyi3ts"]
 
 [ext_resource type="Script" path="res://camera.gd" id="1_vkevm"]
 
@@ -6,7 +6,7 @@
 position = Vector2(160, 90)
 current = true
 smoothing_enabled = true
-script = ExtResource( "1_vkevm" )
+script = ExtResource("1_vkevm")
 
 [node name="Limits" type="Node" parent="."]
 

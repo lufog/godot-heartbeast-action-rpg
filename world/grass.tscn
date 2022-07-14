@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dgonsrl336jdo"]
 
 [ext_resource type="Texture2D" uid="uid://dwau4fwykdt6h" path="res://world/assets/textures/grass.png" id="1_1iqpb"]
 [ext_resource type="Script" path="res://world/grass.gd" id="1_ouxsq"]
@@ -8,18 +8,18 @@
 size = Vector2(14, 14)
 
 [node name="Grass" type="Node2D"]
-script = ExtResource( "1_ouxsq" )
+script = ExtResource("1_ouxsq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( "1_1iqpb" )
+texture = ExtResource("1_1iqpb")
 centered = false
 offset = Vector2(-8, -8)
 
-[node name="Hurtbox" parent="." instance=ExtResource( "4_rm40h" )]
+[node name="Hurtbox" parent="." instance=ExtResource("4_rm40h")]
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 position = Vector2(8, 8)
-shape = SubResource( "RectangleShape2D_bqg4j" )
+shape = SubResource("RectangleShape2D_bqg4j")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 

@@ -1,9 +1,9 @@
-[gd_scene load_steps=26 format=3]
+[gd_scene load_steps=26 format=3 uid="uid://b0nn2p638bj2i"]
 
 [ext_resource type="Script" path="res://enemies/bat.gd" id="1_1i2xm"]
 [ext_resource type="Texture2D" uid="uid://diays3kqqqcom" path="res://enemies/assets/textures/bat.png" id="1_lo2du"]
 [ext_resource type="Shader" path="res://white_color.gdshader" id="2_ghafg"]
-[ext_resource type="Texture2D" path="res://enemies/assets/textures/small_shadow.png" id="2_isqtd"]
+[ext_resource type="Texture2D" uid="uid://c7pimbkyco7c8" path="res://enemies/assets/textures/small_shadow.png" id="2_isqtd"]
 [ext_resource type="PackedScene" path="res://overlap/hurtbox.tscn" id="3_mt5l5"]
 [ext_resource type="PackedScene" path="res://stats.tscn" id="5_7j3b8"]
 [ext_resource type="PackedScene" path="res://player/player_detection_zone.tscn" id="6_p048o"]
@@ -13,32 +13,32 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oxs14"]
 resource_local_to_scene = true
-shader = ExtResource( "2_ghafg" )
+shader = ExtResource("2_ghafg")
 shader_param/active = false
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4r53"]
-atlas = ExtResource( "1_lo2du" )
+atlas = ExtResource("1_lo2du")
 region = Rect2(0, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s2vbe"]
-atlas = ExtResource( "1_lo2du" )
+atlas = ExtResource("1_lo2du")
 region = Rect2(16, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6yvwe"]
-atlas = ExtResource( "1_lo2du" )
+atlas = ExtResource("1_lo2du")
 region = Rect2(32, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5upu"]
-atlas = ExtResource( "1_lo2du" )
+atlas = ExtResource("1_lo2du")
 region = Rect2(48, 0, 16, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0p3a"]
-atlas = ExtResource( "1_lo2du" )
+atlas = ExtResource("1_lo2du")
 region = Rect2(64, 0, 16, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wttd3"]
 animations = [{
-"frames": [SubResource( "AtlasTexture_w4r53" ), SubResource( "AtlasTexture_s2vbe" ), SubResource( "AtlasTexture_6yvwe" ), SubResource( "AtlasTexture_c5upu" ), SubResource( "AtlasTexture_x0p3a" )],
+"frames": [SubResource("AtlasTexture_w4r53"), SubResource("AtlasTexture_s2vbe"), SubResource("AtlasTexture_6yvwe"), SubResource("AtlasTexture_c5upu"), SubResource("AtlasTexture_x0p3a")],
 "loop": true,
 "name": &"Fly",
 "speed": 10.0
@@ -60,75 +60,75 @@ radius = 4.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_8su5w"]
 radius = 5.0
 
-[sub_resource type="Animation" id="Animation_ka6ge"]
-resource_name = "Stop"
-length = 0.1
-
 [sub_resource type="Animation" id="Animation_ocbqu"]
 resource_name = "Start"
 length = 0.2
 loop_mode = 1
 
+[sub_resource type="Animation" id="Animation_ka6ge"]
+resource_name = "Stop"
+length = 0.1
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fqpcb"]
 _data = {
-"Start": SubResource( "Animation_ocbqu" ),
-"Stop": SubResource( "Animation_ka6ge" )
+"Start": SubResource("Animation_ocbqu"),
+"Stop": SubResource("Animation_ka6ge")
 }
 
 [node name="Bat" type="CharacterBody2D"]
 collision_layer = 16
-script = ExtResource( "1_1i2xm" )
+script = ExtResource("1_1i2xm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-material = SubResource( "ShaderMaterial_oxs14" )
+material = SubResource("ShaderMaterial_oxs14")
 position = Vector2(0, -12)
-frames = SubResource( "SpriteFrames_wttd3" )
+frames = SubResource("SpriteFrames_wttd3")
 animation = &"Fly"
-frame = 3
+frame = 2
 playing = true
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]
-texture = ExtResource( "2_isqtd" )
+texture = ExtResource("2_isqtd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-shape = SubResource( "CircleShape2D_5usi7" )
+shape = SubResource("CircleShape2D_5usi7")
 
-[node name="Hurtbox" parent="." instance=ExtResource( "3_mt5l5" )]
+[node name="Hurtbox" parent="." instance=ExtResource("3_mt5l5")]
 visible = false
 position = Vector2(0, -14)
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
-shape = SubResource( "CapsuleShape2D_l85n2" )
+shape = SubResource("CapsuleShape2D_l85n2")
 
-[node name="Stats" parent="." instance=ExtResource( "5_7j3b8" )]
+[node name="Stats" parent="." instance=ExtResource("5_7j3b8")]
 _max_health = 2
 
-[node name="PlayerDetectionZone" parent="." instance=ExtResource( "6_p048o" )]
+[node name="PlayerDetectionZone" parent="." instance=ExtResource("6_p048o")]
 visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
-shape = SubResource( "CircleShape2D_jfrpw" )
+shape = SubResource("CircleShape2D_jfrpw")
 
-[node name="Hitbox" parent="." instance=ExtResource( "7_ky3mw" )]
+[node name="Hitbox" parent="." instance=ExtResource("7_ky3mw")]
 visible = false
 position = Vector2(0, -15)
 collision_layer = 16
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
-shape = SubResource( "CircleShape2D_edgaw" )
+shape = SubResource("CircleShape2D_edgaw")
 
-[node name="SoftCollision" parent="." instance=ExtResource( "8_7ath6" )]
+[node name="SoftCollision" parent="." instance=ExtResource("8_7ath6")]
 visible = false
 
 [node name="CollisionShape2D" parent="SoftCollision" index="0"]
-shape = SubResource( "CircleShape2D_8su5w" )
+shape = SubResource("CircleShape2D_8su5w")
 
-[node name="WanderController" parent="." instance=ExtResource( "9_cmve0" )]
+[node name="WanderController" parent="." instance=ExtResource("9_cmve0")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource( "AnimationLibrary_fqpcb" )
+"": SubResource("AnimationLibrary_fqpcb")
 }
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
