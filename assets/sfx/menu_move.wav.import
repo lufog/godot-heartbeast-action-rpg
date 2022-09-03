@@ -1,7 +1,7 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
+type="AudioStreamWAV"
 uid="uid://c3ij0w410lxmh"
 path="res://.godot/imported/menu_move.wav-735f46a4793358e8c7427309589365a5.sample"
 

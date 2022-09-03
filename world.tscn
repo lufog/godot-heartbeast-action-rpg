@@ -598,10 +598,14 @@ position = Vector2(80, 112)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthUI" parent="CanvasLayer" instance=ExtResource("8_w30kh")]
+layout_mode = 3
+anchors_preset = 15
 offset_left = 3.0
 offset_top = 3.0
 offset_right = 3.0
 offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

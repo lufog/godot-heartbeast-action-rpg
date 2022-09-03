@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bwfxh5j0n6fvv"]
+[gd_scene load_steps=64 format=3 uid="uid://bwfxh5j0n6fvv"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_a4kuy"]
 [ext_resource type="Texture2D" uid="uid://dh2m0nbiqnglg" path="res://player/assets/textures/medium_shadow.png" id="2_6i2y2"]
@@ -12,7 +12,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_py6hi"]
 shader = ExtResource("3_rkcos")
-shader_param/active = false
+active = false
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kivw4"]
 radius = 4.0
@@ -694,7 +694,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:material:shader_param/active")
+tracks/0/path = NodePath("Sprite2D:material:active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -710,7 +710,22 @@ length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:material:shader_param/active")
+tracks/0/path = NodePath("Sprite2D:material:active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nb6rb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:active")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -722,6 +737,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ygedi"]
 _data = {
+"RESET": SubResource("Animation_nb6rb"),
 "Start": SubResource("Animation_uaxrp"),
 "Stop": SubResource("Animation_hkw43")
 }
@@ -761,7 +777,7 @@ parameters/Idle/blend_position = Vector2(0, 1)
 parameters/Roll/blend_position = Vector2(0, 1)
 parameters/Run/blend_position = Vector2(0, 1)
 
-[node name="SwordHitboxPivot" type="Position2D" parent="."]
+[node name="SwordHitboxPivot" type="Marker2D" parent="."]
 visible = false
 position = Vector2(0, -4)
 

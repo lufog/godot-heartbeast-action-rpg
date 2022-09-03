@@ -1,7 +1,7 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
+type="AudioStreamWAV"
 uid="uid://bpbjuo48rt6ra"
 path="res://.godot/imported/pause.wav-afc3610bb12f40f4eb3365e714b3c19f.sample"
 
