@@ -1,62 +1,62 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=15 format=3 uid="uid://bs28afel4dok"]
 
 [ext_resource type="Texture2D" uid="uid://rg0hldipv3yc" path="res://effects/assets/textures/enemy_death_effect.png" id="1_hjog0"]
 [ext_resource type="Script" path="res://effects/effect.gd" id="2_qol5f"]
-[ext_resource type="AudioStream" path="res://effects/assets/sfx/enemy_die.wav" id="3_2viqq"]
+[ext_resource type="AudioStream" uid="uid://cov0wkg0748h0" path="res://effects/assets/sfx/enemy_die.wav" id="3_2viqq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dksgc"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_a23pd"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6iry6"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb0yi"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8rfnp"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_8q2qk"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qujd4"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m4l0"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e3evb"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca73s"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2lxr4"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7tsh"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_50uex"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2s5t"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fw01"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2a6s"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68vse"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_5b8ud"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(256, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2empl"]
-atlas = ExtResource( "1_hjog0" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_0l6lu"]
+atlas = ExtResource("1_hjog0")
 region = Rect2(288, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mhoxr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_50cnw"]
 animations = [{
-"frames": [SubResource( "AtlasTexture_dksgc" ), SubResource( "AtlasTexture_6iry6" ), SubResource( "AtlasTexture_8rfnp" ), SubResource( "AtlasTexture_qujd4" ), SubResource( "AtlasTexture_e3evb" ), SubResource( "AtlasTexture_2lxr4" ), SubResource( "AtlasTexture_50uex" ), SubResource( "AtlasTexture_2fw01" ), SubResource( "AtlasTexture_68vse" ), SubResource( "AtlasTexture_2empl" )],
+"frames": [SubResource("AtlasTexture_a23pd"), SubResource("AtlasTexture_mb0yi"), SubResource("AtlasTexture_8q2qk"), SubResource("AtlasTexture_8m4l0"), SubResource("AtlasTexture_ca73s"), SubResource("AtlasTexture_x7tsh"), SubResource("AtlasTexture_o2s5t"), SubResource("AtlasTexture_t2a6s"), SubResource("AtlasTexture_5b8ud"), SubResource("AtlasTexture_0l6lu")],
 "loop": true,
 "name": &"default",
 "speed": 15.0
 }]
 
 [node name="EnemyDeathEffect" type="AnimatedSprite2D"]
-frames = SubResource( "SpriteFrames_mhoxr" )
+frames = SubResource("SpriteFrames_50cnw")
 offset = Vector2(0, -8)
-script = ExtResource( "2_qol5f" )
+script = ExtResource("2_qol5f")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( "3_2viqq" )
+stream = ExtResource("3_2viqq")
 autoplay = true

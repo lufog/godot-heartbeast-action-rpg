@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://camera/camera.gd" id="1_vkevm"]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2(160, 90)
+current = true
+script = ExtResource("1_vkevm")
+
+[node name="Limits" type="Node" parent="."]
+
+[node name="TopLeft" type="Marker2D" parent="Limits"]
+
+[node name="BottomRight" type="Marker2D" parent="Limits"]
+position = Vector2(320, 180)

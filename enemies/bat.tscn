@@ -1,20 +1,20 @@
-[gd_scene load_steps=26 format=3 uid="uid://b0nn2p638bj2i"]
+[gd_scene load_steps=26 format=3]
 
 [ext_resource type="Script" path="res://enemies/bat.gd" id="1_1i2xm"]
 [ext_resource type="Texture2D" uid="uid://diays3kqqqcom" path="res://enemies/assets/textures/bat.png" id="1_lo2du"]
 [ext_resource type="Shader" path="res://white_color.gdshader" id="2_ghafg"]
 [ext_resource type="Texture2D" uid="uid://c7pimbkyco7c8" path="res://enemies/assets/textures/small_shadow.png" id="2_isqtd"]
-[ext_resource type="PackedScene" path="res://overlap/hurtbox.tscn" id="3_mt5l5"]
-[ext_resource type="PackedScene" uid="uid://ihf4hpy7141u" path="res://stats.tscn" id="5_7j3b8"]
-[ext_resource type="PackedScene" path="res://player/player_detection_zone.tscn" id="6_p048o"]
-[ext_resource type="PackedScene" path="res://overlap/hitbox.tscn" id="7_ky3mw"]
-[ext_resource type="PackedScene" path="res://overlap/soft_collision.tscn" id="8_7ath6"]
-[ext_resource type="PackedScene" path="res://enemies/wander_controller.tscn" id="9_cmve0"]
+[ext_resource type="PackedScene" uid="uid://bhd7ukxi54iif" path="res://overlap/hurtbox.tscn" id="3_mt5l5"]
+[ext_resource type="PackedScene" path="res://stats/stats.tscn" id="5_7j3b8"]
+[ext_resource type="PackedScene" uid="uid://b5un3euojrtek" path="res://player/player_detection_zone.tscn" id="6_p048o"]
+[ext_resource type="PackedScene" uid="uid://di0s88skrygnq" path="res://overlap/hitbox.tscn" id="7_ky3mw"]
+[ext_resource type="PackedScene" uid="uid://blcn5wx2yspsy" path="res://overlap/soft_collision.tscn" id="8_7ath6"]
+[ext_resource type="PackedScene" uid="uid://c8285axt8dmpc" path="res://enemies/wander_controller.tscn" id="9_cmve0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_oxs14"]
 resource_local_to_scene = true
 shader = ExtResource("2_ghafg")
-active = null
+shader_parameter/active = null
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w4r53"]
 atlas = ExtResource("1_lo2du")
@@ -84,7 +84,6 @@ material = SubResource("ShaderMaterial_oxs14")
 position = Vector2(0, -12)
 frames = SubResource("SpriteFrames_wttd3")
 animation = &"Fly"
-frame = 3
 playing = true
 
 [node name="ShadowSprite2D" type="Sprite2D" parent="."]

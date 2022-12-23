@@ -1,9 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://c8285axt8dmpc"]
 
 [ext_resource type="Script" path="res://enemies/wander_controller.gd" id="1_0amqq"]
 
 [node name="WanderController" type="Node2D"]
-script = ExtResource( "1_0amqq" )
+script = ExtResource("1_0amqq")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

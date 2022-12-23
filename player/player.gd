@@ -13,7 +13,6 @@ var state = MOVE;
 var roll_direction = Vector2.DOWN
 var stats = PlayerStats
 
-@onready var animation_player = $AnimationPlayer
 @onready var animation_tree = $AnimationTree
 @onready var animation_state = animation_tree.get("parameters/playback")
 @onready var sword_hitbox = $SwordHitboxPivot/SwordHitbox
@@ -67,34 +66,18 @@ func move_state(delta):
 
 	move_and_slide()
 
-# TODO: when Godot will fix #28311
-@onready var rollTimer = $TEMP/RollTimer
-
 func roll_state():
 	animation_state.travel("Roll")
 	velocity = roll_direction * roll_speed
 	move_and_slide()
-	# TODO: when Godot will fix #28311, replace with
-	# await animationPlayer.animation_finished
-	if rollTimer.is_stopped():
-		rollTimer.start()
-	await rollTimer.timeout
-	################################################
+	await animation_tree.animation_finished
 	velocity = Vector2.ZERO
 	state = MOVE
-
-# TODO: when Godot will fix #28311
-@onready var attackTimer = $TEMP/AttackTimer
 
 func attack_state():
 	animation_state.travel("Attack")
 	velocity = Vector2.ZERO
-	# TODO: when Godot will fix #28311, replace with
-	# await animationPlayer.animation_finished
-	if attackTimer.is_stopped():
-		attackTimer.start()
-	await attackTimer.timeout
-	################################################
+	await animation_tree.animation_finished
 	state = MOVE
 
 func _on_hurtbox_area_entered(area):
