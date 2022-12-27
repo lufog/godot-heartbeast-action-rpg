@@ -4,24 +4,24 @@
 [ext_resource type="Script" path="res://effects/effect.gd" id="2_1r073"]
 [ext_resource type="AudioStream" uid="uid://cgu7tfxgjxgbj" path="res://effects/assets/sfx/hit.wav" id="3_nd5j3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b55ob"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_84ag4"]
 atlas = ExtResource("1_s0qo2")
 region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3v6g4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_74anu"]
 atlas = ExtResource("1_s0qo2")
 region = Rect2(24, 0, 24, 24)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1hwog"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jv6in"]
 animations = [{
-"frames": [SubResource("AtlasTexture_b55ob"), SubResource("AtlasTexture_3v6g4")],
+"frames": [SubResource("AtlasTexture_84ag4"), SubResource("AtlasTexture_74anu")],
 "loop": true,
 "name": &"default",
 "speed": 15.0
 }]
 
 [node name="HitEffect" type="AnimatedSprite2D"]
-frames = SubResource("SpriteFrames_1hwog")
+frames = SubResource("SpriteFrames_jv6in")
 offset = Vector2(0, -8)
 script = ExtResource("2_1r073")
 

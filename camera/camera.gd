@@ -1,7 +1,9 @@
 extends Camera2D
 
+
 @onready var top_left = $Limits/TopLeft
 @onready var bottom_right = $Limits/BottomRight
+
 
 func _ready():
 	limit_top = top_left.position.y

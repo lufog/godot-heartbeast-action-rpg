@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://brpy7grgm6j27" path="res://world/assets/textures/dirt_tileset.png" id="2_h6d55"]
 [ext_resource type="PackedScene" uid="uid://4vlkeq4lpfd" path="res://world/bush.tscn" id="2_u14oh"]
 [ext_resource type="Texture2D" uid="uid://dmwvv44fgxdk0" path="res://world/assets/textures/cliff_tileset.png" id="3_p2ogg"]
-[ext_resource type="PackedScene" path="res://camera/camera.tscn" id="4_ck2yd"]
-[ext_resource type="PackedScene" path="res://enemies/bat.tscn" id="5_cd4be"]
+[ext_resource type="PackedScene" uid="uid://bj10lwpeeda5f" path="res://camera/camera.tscn" id="4_ck2yd"]
+[ext_resource type="PackedScene" uid="uid://drdiusn5ahxqk" path="res://enemies/bat.tscn" id="5_cd4be"]
 [ext_resource type="PackedScene" uid="uid://dgonsrl336jdo" path="res://world/grass.tscn" id="6_3w6v5"]
 [ext_resource type="PackedScene" uid="uid://l7mv004n47ru" path="res://world/tree.tscn" id="8_d3asf"]
 [ext_resource type="PackedScene" uid="uid://ccx2ap8qx1rhs" path="res://ui/health_ui.tscn" id="8_w30kh"]
@@ -602,8 +602,6 @@ offset_left = 3.0
 offset_top = 3.0
 offset_right = 3.0
 offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 

@@ -4,56 +4,56 @@
 [ext_resource type="Script" path="res://effects/effect.gd" id="2_qol5f"]
 [ext_resource type="AudioStream" uid="uid://cov0wkg0748h0" path="res://effects/assets/sfx/enemy_die.wav" id="3_2viqq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a23pd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfcge"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mb0yi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm0ef"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8q2qk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8t55l"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8m4l0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_njfwp"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ca73s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6crcg"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x7tsh"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj7wf"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(160, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o2s5t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rmky"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(192, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t2a6s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dpk2"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(224, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5b8ud"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvapd"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(256, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0l6lu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb0px"]
 atlas = ExtResource("1_hjog0")
 region = Rect2(288, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_50cnw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_no20w"]
 animations = [{
-"frames": [SubResource("AtlasTexture_a23pd"), SubResource("AtlasTexture_mb0yi"), SubResource("AtlasTexture_8q2qk"), SubResource("AtlasTexture_8m4l0"), SubResource("AtlasTexture_ca73s"), SubResource("AtlasTexture_x7tsh"), SubResource("AtlasTexture_o2s5t"), SubResource("AtlasTexture_t2a6s"), SubResource("AtlasTexture_5b8ud"), SubResource("AtlasTexture_0l6lu")],
+"frames": [SubResource("AtlasTexture_hfcge"), SubResource("AtlasTexture_nm0ef"), SubResource("AtlasTexture_8t55l"), SubResource("AtlasTexture_njfwp"), SubResource("AtlasTexture_6crcg"), SubResource("AtlasTexture_wj7wf"), SubResource("AtlasTexture_1rmky"), SubResource("AtlasTexture_0dpk2"), SubResource("AtlasTexture_jvapd"), SubResource("AtlasTexture_jb0px")],
 "loop": true,
 "name": &"default",
 "speed": 15.0
 }]
 
 [node name="EnemyDeathEffect" type="AnimatedSprite2D"]
-frames = SubResource("SpriteFrames_50cnw")
+frames = SubResource("SpriteFrames_no20w")
 offset = Vector2(0, -8)
 script = ExtResource("2_qol5f")
 

@@ -1,5 +1,6 @@
 extends Control
 
+
 var hearts := 4:
 	set(value):
 		hearts = clamp(value, 0, max_hearts)
@@ -18,14 +19,17 @@ var max_hearts := 4:
 @onready var heart_ui_empty = $HeartUiEmpty
 @onready var heart_ui_full = $HeartUiFull
 
+
 func _ready():
 	max_hearts = PlayerStats.max_health
 	hearts = PlayerStats.health
 	PlayerStats.health_changed.connect(set_hearts)
 	PlayerStats.max_health_changed.connect(set_max_hearts)
 
+
 func set_hearts(value):
 	hearts = value
+
 
 func set_max_hearts(value):
 	max_hearts = value

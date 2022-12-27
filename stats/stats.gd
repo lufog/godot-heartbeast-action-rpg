@@ -1,5 +1,10 @@
 extends Node
 
+
+signal no_health
+signal health_changed(value)
+signal max_health_changed(value)
+
 @export var max_health := 1:
 	get:
 		return max_health
@@ -17,9 +22,6 @@ var health: int:
 		if health <= 0:
 			no_health.emit()
 
-signal no_health
-signal health_changed(value)
-signal max_health_changed(value)
 
 func _ready():
 	health = max_health

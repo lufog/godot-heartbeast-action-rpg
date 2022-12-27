@@ -3,36 +3,36 @@
 [ext_resource type="Texture2D" uid="uid://c6n7ngimtrkyo" path="res://effects/assets/textures/grass_effect.png" id="1_swrmh"]
 [ext_resource type="Script" path="res://effects/effect.gd" id="2_cpy0c"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_78nq5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnl42"]
 atlas = ExtResource("1_swrmh")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lgo08"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktk05"]
 atlas = ExtResource("1_swrmh")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fpx3e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yick"]
 atlas = ExtResource("1_swrmh")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7a3mw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1glo"]
 atlas = ExtResource("1_swrmh")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ya8r6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0eun5"]
 atlas = ExtResource("1_swrmh")
 region = Rect2(128, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_7py5x"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_oidtv"]
 animations = [{
-"frames": [SubResource("AtlasTexture_78nq5"), SubResource("AtlasTexture_lgo08"), SubResource("AtlasTexture_fpx3e"), SubResource("AtlasTexture_7a3mw"), SubResource("AtlasTexture_ya8r6")],
+"frames": [SubResource("AtlasTexture_bnl42"), SubResource("AtlasTexture_ktk05"), SubResource("AtlasTexture_0yick"), SubResource("AtlasTexture_c1glo"), SubResource("AtlasTexture_0eun5")],
 "loop": true,
 "name": &"default",
 "speed": 15.0
 }]
 
 [node name="GrassEffect" type="AnimatedSprite2D"]
-frames = SubResource("SpriteFrames_7py5x")
+frames = SubResource("SpriteFrames_oidtv")
 centered = false
 offset = Vector2(-8, -8)
 script = ExtResource("2_cpy0c")
